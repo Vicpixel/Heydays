@@ -1,16 +1,14 @@
-let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
+// Selecciona el elemento del header
+const header = document.querySelector('header');
+
+// Obtiene la posición inicial del header
+const stickyOffset = header.offsetTop;
+
+window.addEventListener('scroll', () => {
+    // Compara la posición de scroll con la posición del header
+    if (window.pageYOffset > stickyOffset) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
     }
-}
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}
+});

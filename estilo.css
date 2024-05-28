@@ -11,89 +11,82 @@ html{
 /* ***************** */
 /* SECCION I N I C I O */
 /* ***************** */
-#start{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-#start header{
-    width: 100%;
-    background-color: #a9d3cc;
-}
-#start header .content-header{
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 20px;
-    position: relative;
 
-}
-#start header .content-header nav{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-#start header .content-header nav ul{
-    display: flex;
-    list-style: none;
-}
-#start header .content-header .logo{
-    color: #black;
-    font-size: 22px;
-}
-#start header .content-header nav ul li{
-    text-align: center;
-}
-#start header .content-header nav ul li i{
-    display: block;
-    color: #black;
-    margin-bottom: 10px;
-}
-#start header .content-header nav ul li a{
-    display: block;
-    text-decoration: none;
-    color:#black;
-    margin: 0px 20px;
-}
-#start header .content-header nav ul li:hover i{
-    color: #black;
-}
-#start header .content-header .social a{
-    display: inline-block;
-    background-color: #ff8f46;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-}
-#start header .content-header .social > i{
-    display: inline-block;
-    color: #black;
-    margin-left: 10px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .nav-responsive{
    display: none;
    font-size: 25px;
    color: #a8a8a8;
 }
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #ccc;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+}
 /* Carrusel */
 #start .slider{
     position: relative;
     height: 100%;
-    margin-bottom: 10px;
+    padding: 0%;
+    margin: 0;
 }
+
 #start .slider .info{
     position: absolute;
-    
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 50%;
     text-align: center;
-    color:#fff;
+    color: #fff;
 }
+
 #start .slider .info h2{
     font-size: 50px;
     margin-bottom: 20px;
@@ -110,21 +103,25 @@ html{
     border-radius: 30px;
     cursor: pointer;
 }
-#start .gallery {
+
+#start .gallery{
     width: 100%;
     height: 100%;
 }
-  
-#start .gallery-cell {
+#start .gallery-cell{
     width: 100%;
-    margin-right: 10px;
     height: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
+
 #start .gallery-cell img{
     display: block;
     width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+    height: 100vw;
+    object-fit: cover;   
 }
 
 
@@ -375,7 +372,7 @@ html{
         transform: translateX(0);
     }
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:700px) 
     #sabores .fila{
         display: block;
     }
@@ -394,10 +391,10 @@ html{
     .nav-responsive{
         display: block;
     }
-    #inicio header .contenido-header{
+    #start header .contenido-header{
         padding: 20px;
     }
-    #inicio header .contenido-header nav.responsive{
+    #start header .contenido-header nav.responsive{
         display: block;
         position:absolute;
         left: 0;
@@ -428,5 +425,5 @@ html{
     #contacto .fila input{
         width: 90%;
     }
-}
+
 
