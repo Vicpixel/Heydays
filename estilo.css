@@ -118,8 +118,14 @@ nav ul li a {
 
 #nuevo .gallery-cell{
     width: 100%;
-    margin-right: 10px;
-    height: 100%;
+    /*margin: 30px;
+    height: 80vh;*/
+}
+
+#nuevo .gallery-cell img{
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* ***************** */
