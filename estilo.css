@@ -21,10 +21,10 @@ body {
 .nav-responsive{
    display: none;
    font-size: 25px;
-   color: #a8a8a8;
+   color: #264653;
 }
 header {
-    background-color: #a9d3cc;
+    background-color: #264653;
     color: white;
     padding: 10px 0;
     width: 100%;
@@ -68,7 +68,7 @@ nav ul li a {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #a9d3cc;
+    background-color: #264653;
 }
 /* Carrusel */
 #nuevo{
@@ -76,12 +76,14 @@ nav ul li a {
     margin-bottom: 0;
     margin-right: 0;
     margin-left: 0;
+    background-color: ;
 }
 
 #nuevo .slider{
     position: relative;
     max-height: 100%;
     max-width: 100%;
+    background-color: #264653;
 }
 
 #nuevo .slider .info{
@@ -92,6 +94,11 @@ nav ul li a {
     width: 50%;
     text-align: center;
     color: #fff;
+    background: rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    z-index: 2;
 }
 
 #nuevo .slider .info h2{
@@ -104,7 +111,7 @@ nav ul li a {
     margin-top: 20px;
     font-size: 20px;
     border:none;
-    background-color: #ff8f46;
+    background-color: #F4A261;
     color: #fff;
     padding: 7px 25px;
     border-radius: 30px;
@@ -131,154 +138,117 @@ nav ul li a {
 /* ***************** */
 /* SECCION S A B O R E S */
 /* ***************** */
-#flavors{
-    padding:0 0 0 0;
-    background-color:#a9d3cc;
+/* ***************** */
+/* SECCION S A B O R E S */
+/* ***************** */
+/* ***************** */
+/* SECCION S A B O R E S */
+/* ***************** */
+#flavors {
+    padding: 0;
+    background-color: #264653;
 }
-#flavors h2{
+
+#flavors h2 {
     text-align: center;
     font-weight: bold;
     font-size: 50px;
-    background-color: #cba052;
+    background-color: #2A9D8F;
+    padding: 20px 0 20px 0;
 }
-#flavors .row{
+
+#flavors .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    max-width: fit-content;
-    margin: auto;
-}
-
-#flavors .item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-#flavors .icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-}
-
-#flavors .icon img{
-    max-width: 100%;
-    height: auto;
-}
-#flavors h3{
-    text-align: center;
-    font-weight: bold;
-}
-
-#flavors p{
-    text-align: center;
+    margin: auto;
 }
 
 .flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 20px;
+    flex: 1 0 30%; /* Adjusts to occupy available space */
+    max-width: 600px; /* Ensures cards don't exceed a maximum width */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-
-/*#flavors .row .item{
-    align-items: center;
-    padding: 5px;
-    align-content: center;
-}
-
-#flavors .row .item img{
-    align-content: center;
-    align-items: center;
-    padding: 5px;
-
-}
-
-
-#flavors .fila .item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
     display: flex;
-    align-items:center;
-    margin: 0px 0px;
-    padding: 5px;
-}*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-#flavors .row .item:hover{
-    background-color:#ff8f46;
-    border-radius: 20px;
-    cursor: pointer;
+.flip-card-front {
+    background-color: #fff;
+    color: black;
 }
-#flavors .row .item .info{
-    margin-left: 15px;
-    margin-bottom: 15px;
-    font-size: 20px;
+
+
+.flip-card-back {
+    background-color: #F4A261;
+    color: white;
+    transform: rotateY(180deg);
 }
-/*#flavors button{
-    display: block;
-    width: fit-content;
-    margin: auto;
-    margin-top: 20px;
-    font-size: 20px;
-    border:none;
-    background-color: #ff8f46;
-    color: #fff;
-    padding: 7px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-}*/
+
+.flip-card .icon img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.flip-card .info h3 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+.flip-card .info p {
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 30px
+}
+
 
 /* ***************** */
 /* Dishes Section */
 /* ***************** */
 #dishes{
-    background-color: #a9d3cc;
+    background-color: #264653;
 }
 #dishes h2{
     text-align: center;
     font-weight: bold;
     font-size: 50px;
     margin-bottom:px;
-    background-color: #cba052;
+    background-color: #2A9D8F;
+    padding: 20px 0 20px 0;
 }
 #dishes .row{
     max-width: fit-content;
@@ -297,10 +267,12 @@ nav ul li a {
 }
 #dishes .row .item p{
     position:absolute;
+    font-size: 30px;
+    text-align: center;
     width: 100%;
     bottom: -100%;
-    padding: 10px;
-    background-color:#ff8f46;
+    padding: 15px;
+    background-color:#F4A261;
     color: #fff;
     transition: .5s;
 }
@@ -314,7 +286,7 @@ nav ul li a {
     margin-top: 20px;
     font-size: 20px;
     border:none;
-    background-color: #ff8f46;
+    background-color: #F4A261;
     color: #fff;
     padding: 7px 25px;
     border-radius: 30px;
@@ -333,14 +305,19 @@ nav ul li a {
     font-weight: bold;
     font-size: 50px;
     margin-bottom: px;
-    background-color: #cba052;
+    background-color: #2A9D8F;
+    padding: 20px 0 20px 0;
+}
+
+#blog h3 p{
+    font-size: 50px;
 }
 
 .executive .item{
     display: flex;
     align-items: center;
     text-align: center;
-    background-color: #a9d3cc;
+    background-color: #264653;
 }
 
 .executive .info{
@@ -362,7 +339,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     text-align: center;
-    background-color: #ff8f46;
+    background-color: #2A9D8F;
 }
 
 .sous .info{
@@ -393,6 +370,7 @@ nav ul li a {
     margin-left: 200px;
 }
 
+
 .cook .info p{
     margin-left: 25px;
     width:400px;
@@ -407,7 +385,7 @@ nav ul li a {
 /* SECCION C O N T A C TO */
 /* ***************** */
 #contact{
-    background-color: #ff8f46;
+    background-color: #264653;
     padding: 50px 0;
 }
 #contact .row{
